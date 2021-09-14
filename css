@@ -1,0 +1,20 @@
+h1{
+  color:green;
+  font-family: Papyrus,Copperplate,Fantasy;
+  text-align: center;
+}
+h2{
+  color:whitesmoke;
+}
+Body{
+  background-color: orange;
+  text-align: center;
+}
+button{
+  border-radius: 50%;
+  color:white;
+  padding: 30px;
+  background-color: red;
+
+
+}

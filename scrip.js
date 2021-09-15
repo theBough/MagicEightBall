@@ -6,12 +6,20 @@ function press(){
     rndnum = Math.floor(rndnum * 10);
     theirQ = "> " + document.getElementById("question").value;
     document.getElementById("question").value = "";
-    document.getElementById("answer").innerHTML = theirQ + "</br>" + getWords(rndnum);
+    // this is where i want to add my timeout
+    document.getElementById("myButton").style.visibility = "hidden";
+    document.getElementById("answer").innerHTML = "Let me think about this.";
+    setTimeout(showAnswer,3000);
 }//end press
 
+//After the timeout this function will be called, and 
+//it will display the response from the 8ball
+function showAnswer(){
+  document.getElementById("answer").innerHTML = theirQ + "</br>" + getWords(rndnum);
+  document.getElementById("myButton").style.visibility = "visible";
+}//end showAnswer
+
 //This function will return a sentence
-// please customize it and add your own.
-//please have at least 10 responses.
 function getWords(number){
     switch(number){
       case 0:
